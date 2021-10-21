@@ -1,0 +1,35 @@
+{
+    "type": "project",
+    "require": {
+        "contao/calendar-bundle": "4.9.*",
+        "contao/comments-bundle": "4.9.*",
+        "contao/conflicts": "*@dev",
+        "contao/faq-bundle": "4.9.*",
+        "contao/listing-bundle": "4.9.*",
+        "contao/manager-bundle": "4.9.*",
+        "contao/news-bundle": "4.9.*",
+        "contao/newsletter-bundle": "4.9.*",
+        "markocupic/dummy-bundle": "^1.0",
+        "terminal42/contao-easy_themes": "^2.2"
+    },
+    "extra": {
+        "contao-component-dir": "assets"
+        
+    },
+    "autoload": {
+
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Contao\\ManagerBundle\\Composer\\ScriptHandler::initializeApplication"
+        ],
+        "post-update-cmd": [
+            "Contao\\ManagerBundle\\Composer\\ScriptHandler::initializeApplication"
+        ]
+    }
+
+
+}
